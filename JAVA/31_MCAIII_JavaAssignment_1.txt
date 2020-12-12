@@ -1,0 +1,1967 @@
+*************************************************************************************************************************************************************
+Name		:	Shubham Rathore
+Subject		:	JAVA
+Roll No		:	31
+Class		:	MCA-3
+*************************************************************************************************************************************************************
+Part1:
+*************************************************************************************************************************************************************
+Que1 : Write a program for “Hello world”.
+*************************************************************************************************************************************************************
+class Programm1
+{
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+Hello World
+*************************************************************************************************************************************************************
+Que2 : Write a program to demonstrate the use of Command Line Argument.
+*************************************************************************************************************************************************************
+class Programm2
+{
+
+    public static void main(String[] args)
+    {
+        int i=0;
+        for(i=0;i<args.length;i++)
+        {   
+            System.out.println(args[i]);
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part1>java Programm2 shubham akash
+shubham
+akash
+*************************************************************************************************************************************************************
+Que3 : Write a program to show Arithmetic operation.
+*************************************************************************************************************************************************************
+class Programm3
+{
+    public static void main(String[] args)
+    {
+        float no1,no2;
+        no1 = Float.parseFloat(args[0]);
+        no2 = Float.parseFloat(args[1]);
+        
+        System.out.println(no1 + " + " + no2 + " = " + (no1+no2));//for addition
+        System.out.println(no1 + " * " + no2 + " = " + (no1*no2));//for multiplication
+        System.out.println(no1 + " / " + no2 + " = " + (no1/no2));//for division
+        System.out.println(no1 + " - " + no2 + " = " + (no1-no2));//for substraction
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part1>java Programm3 2 6
+2.0 + 6.0 = 8.0
+2.0 * 6.0 = 12.0
+2.0 / 6.0 = 0.33333334
+2.0 - 6.0 = -4.0
+
+E:\Assignments\JAVA\Part1>java Programm3 4 3
+4.0 + 3.0 = 7.0
+4.0 * 3.0 = 12.0
+4.0 / 3.0 = 1.3333334
+4.0 - 3.0 = 1.0
+*************************************************************************************************************************************************************
+Que4 : Write a program to demonstrate Floating point Number.
+*************************************************************************************************************************************************************
+class Programm4
+{
+    public static void main(String[] args)
+    {
+        float x;
+        x = 1.25f;//to use float value as float
+        System.out.print("X is "+x);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+X is 1.25
+*************************************************************************************************************************************************************
+Que5 : Write a program to convert Gallon into Liters.
+*************************************************************************************************************************************************************
+import java.util.*; 
+class Programm5
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        float gallon=0,liter=0;
+        System.out.print("Enter gallon :");
+        gallon = sc.nextFloat();
+        liter = gallon * 3.78451f;
+        System.out.println(gallon + " Gallon = " + liter + " Liter");
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+Enter gallon :23.78
+23.78 Gallon = 89.99565 Liter
+*************************************************************************************************************************************************************
+Que6 : Write a program to show use of If statement.
+*************************************************************************************************************************************************************
+import java.util.*;
+class Programm6
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);  
+        
+        float num1=0,num2=0;
+        System.out.println("Enter a number");
+        num1 = sc.nextFloat();
+        System.out.println("Enter a number");
+        num2 = sc.nextFloat();
+        String option = new String();
+        System.out.println("We have addition substraction multiplication division");
+        System.out.println("What do you want please enter : ");
+        option = sc.nextLine();
+        option = sc.nextLine();
+        if(option.equals("Addition") || option.equals("addition") || option.equals("add"))
+        {
+            System.out.println("Addition IS \n" + (num1+num2));
+        }
+        else if(option.equals("Substraction") || option.equals("substraction") || option.equals("sub"))
+        {
+            System.out.println("Substraction IS \n" + (num1-num2));
+        }
+        else if(option.equals("Multiplication") || option.equals("multiplication") || option.equals("mul"))
+        {
+            System.out.println("Multiplication IS \n" + (num1*num2));
+        }
+        else if(option.equals("Division") || option.equals("division") || option.equals("div"))
+        {
+            System.out.println("Division IS \n" + (num1/num2));
+        }
+        else
+        {
+            System.out.println(option);
+            System.out.println("Wrong choice");
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part1>java Programm6
+Enter a number
+23
+Enter a number
+12
+We have addition substraction multiplication division
+What do you want please enter :
+add
+Addition IS
+35.0
+
+E:\Assignments\JAVA\Part1>java Programm6
+Enter a number
+45
+Enter a number
+23
+We have addition substraction multiplication division
+What do you want please enter :
+sub
+Substraction IS
+22.0
+
+E:\Assignments\JAVA\Part1>java Programm6
+Enter a number
+12
+Enter a number
+12
+We have addition substraction multiplication division
+What do you want please enter :
+mul
+Multiplication IS
+144.0
+
+E:\Assignments\JAVA\Part1>java Programm6
+Enter a number
+144
+Enter a number
+12
+We have addition substraction multiplication division
+What do you want please enter :
+div
+Division IS
+12.0
+*************************************************************************************************************************************************************
+Que7 : Write  a program to show use of array perform display , summation and find maximum element. 
+*************************************************************************************************************************************************************
+import java.util.*;
+class Programm7
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int a[] = new int[5],i=0;
+        for(i=0;i<a.length;i++)
+        {
+            a[i] = scanner.nextInt();
+        }
+
+        int max=0,sum=0;
+
+        for(i=0;i<a.length;i++)
+        {
+            if(a[i]>max)
+            {
+                max = a[i];
+            }
+            sum += a[i];
+        }
+
+        System.out.println("max : " + max);
+
+        System.out.println("sum : " + sum);
+
+        System.out.print("\n List : ");
+        for(i=0;i<a.length;i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part1>java Programm7 23
+12
+34
+45
+23
+78
+max : 78
+sum : 192
+
+ List : 12 34 45 23 78
+*************************************************************************************************************************************************************
+Que8 : Write a program which shows Character Arithmetic.
+*************************************************************************************************************************************************************
+class Programm8
+{
+    public static void main(String[] args)
+    {
+        char ch;
+        ch = 'X';
+        System.out.println("ch contains "+ch);
+
+        ch++;//increment
+        System.out.println("ch is now "+ch);
+
+        ch = 90;//giving aski value of z
+        System.out.println("ch is now "+ch);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+ch contains X
+ch is now Y
+ch is now Z
+*************************************************************************************************************************************************************
+Que9 : Perform “Sound.java” program.
+*************************************************************************************************************************************************************
+class Programm9
+{
+    public static void main(String[] args)
+    {
+        boolean b;
+        
+        b = false;//assigning false to b
+        System.out.println("b is "+b);
+
+        b = true;//assigning false to b
+        System.out.println("b is "+b);
+
+        if(b) System.out.println("This is executed");//using b in if
+
+        b = false;
+        if(b) System.out.println("This is executed");//using b in if with the value false
+
+        //outcome of a relational operator is boolean value
+        System.out.println("10 > 9 is " + (10>9));
+    }
+}
+*************************************************************************************************************************************************************
+Output: 
+*************************************************************************************************************************************************************
+b is false
+b is true
+This is executed
+10 > 9 is true
+*************************************************************************************************************************************************************
+Que10 : Write a program to demonstrate Boolean data type.
+*************************************************************************************************************************************************************
+class Programm10
+{
+    public static void main(String[] args)
+    {
+        double dist;
+        dist = 7.2 * 1100;
+        System.out.println("The lightning is "+ dist +" feet away.");
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+The lightning is 7920.0 feet away.
+*************************************************************************************************************************************************************
+Que11 : Perform  “ScopeDemo”  program.
+*************************************************************************************************************************************************************
+class Programm11
+{
+    public static void main(String[] args)
+    {
+        int x; //known to all code within the main
+
+        x=10;
+        if(x==10)
+        {//start of new scope
+
+            int y = 20;//limited to if scope only
+
+            //x and y both are known here
+
+            System.out.println("x and y: " + x + " " + y);
+
+            x = y * 2;
+        }
+        //y = 10; //Error: y is not known here
+
+        //x is still known here
+        System.out.println("x is now " + x);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+x and y: 10 20
+x is now 40
+*************************************************************************************************************************************************************
+Part2:
+*************************************************************************************************************************************************************
+Que12 : Write a program to generate multiplication table.
+*************************************************************************************************************************************************************
+class Programm12
+{
+    public static void main(String[] args)
+    {
+        int number=0,range=0;
+        number = Integer.parseInt(args[0]);
+
+        for(int index=1;index<=10;index++)
+        {
+            System.out.println(number + " * " + index + " = " + (number*index));
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm12 12
+12 * 1 = 12
+12 * 2 = 24
+12 * 3 = 36
+12 * 4 = 48
+12 * 5 = 60
+12 * 6 = 72
+12 * 7 = 84
+12 * 8 = 96
+12 * 9 = 108
+12 * 10 = 120
+*************************************************************************************************************************************************************
+Que14 : Write a program to perform “BitDemo.java”.
+*************************************************************************************************************************************************************
+class Programm14
+{
+    public static void main(String[] args)
+    {
+        int bitmask = 0x000F;
+        int val = 0x2222;
+        System.out.println(val & bitmask);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm14
+2
+*************************************************************************************************************************************************************
+Que15 : Write a program to perform MathClass mathods.
+*************************************************************************************************************************************************************
+public class Programm15 //to calculate the radius of pond
+{
+    public static void main(String[] args)
+    {
+        int fishCount = 20;     //Number of fishes in pond
+        int fishLength = 10;    //Average fish length
+        int lengthPerSqFit = 2; //fish length per square foot of surface
+        double radius = 0.0;    //Pond radius in feet
+
+        int feet = 0;           //Pond radius whole feet
+        int inches = 0;         //and whole inches
+        
+        double pondArea = (double)(fishCount * fishLength)/lengthPerSqFit;//to calculate pond area
+        radius = Math.sqrt(pondArea/Math.PI);//to calcualte radius of pond
+        feet = (int)Math.floor(radius);//get feet
+        inches = (int)Math.round(12.0 * (radius - feet));//get inches
+
+        System.out.println("To hold " + fishCount + " fishes averaging " + fishLength 
+        + " inches long, you need a pond with an area of \n"+
+        pondArea + " squarefeet.");
+
+        System.out.println(
+            "The radius of pond with area " + pondArea + " squarefeet is \n" + feet + " feet and " + inches + " inches."
+        );
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm15
+To hold 20 fishes averaging 10 inches long, you need a pond with an area of
+100.0 squarefeet.
+The radius of pond with area 100.0 squarefeet is
+5 feet 8 inches.
+*************************************************************************************************************************************************************
+Que16 : Write a program to demonstrate arithmetic operations with values of type char .
+*************************************************************************************************************************************************************
+//Arithmetic with character code
+public class Programm16
+{
+    public static void main(String[] args)
+    {
+        char letter1 = 'A';
+        char letter2 = (char)(letter1 + 1);
+        char letter3 = letter2;
+
+        System.out.println("Here\'s a sequance of letters:" + letter1 + letter2 + (++letter3));
+
+        //letter3 is now c
+        System.out.println("Here are the decimal codes for the letters:\n"+
+                            letter1 + " : " + (int)letter1 + 
+                            "   " + letter2 + " : " + (int)letter2 +
+                            "   " + letter3 + " : " + (int)letter3);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+Here's a sequance of letters:ABC
+Here are the decimal codes for the letters:
+A : 65   B : 66   C : 67
+*************************************************************************************************************************************************************
+Que17 : Write a program to demonstrate use of shift operator.
+*************************************************************************************************************************************************************
+import static java.lang.Long.toHexString;
+
+public class Programm17
+{
+    public static void main(String[] args)
+    {
+        char letterA = 'A';
+        char letterB = 'B';
+        char letterC = 'C';
+        char letterD = 'D';
+
+
+        long packed = 0L;
+
+        packed = letterD;
+        packed = (packed<<16) | letterC;
+        packed = (packed<<16) | letterB;
+        packed = (packed<<16) | letterA;
+
+        System.out.println("packed now contains 0x " + toHexString(packed));
+
+        long mask = 0xFFFF;
+        char letter = (char)(packed & mask);
+        System.out.println("From right to left the letters in packed are:");
+        System.out.println("  " + letter + "  0x" + toHexString(letter));
+        packed >>=16;
+        letter = (char)(packed & mask);
+        System.out.println("  " + letter + "  0x" + toHexString(letter));
+        packed >>=16;
+        letter = (char)(packed & mask);
+        System.out.println("  " + letter + "  0x" + toHexString(letter));
+        packed >>=16;
+        letter = (char)(packed & mask);
+        System.out.println("  " + letter + "  0x" + toHexString(letter));
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+packed now contains 0x 44004300420041
+From right to left the letters in packed are:
+  A  0x41
+  B  0x42
+  C  0x43
+  D  0x44
+*************************************************************************************************************************************************************
+Que18 : Write a program to show use of Bitwise operators.
+*************************************************************************************************************************************************************
+//betwise operator
+import static java.lang.Integer.toBinaryString;
+
+public class Programm18
+{
+    public static void main(String[] args)
+    {
+        int indicators = 0xFF07;
+        int selectBit3 = 0x4;
+
+        System.out.println("indicators              = " + toBinaryString(indicators));
+        System.out.println("selectBit3              = " + toBinaryString(selectBit3));
+        indicators  &= selectBit3;
+        System.out.println("indicators & selectBit3 = " + toBinaryString(indicators));
+        indicators = 0xFF09;
+        System.out.println("\nindicators              = " + toBinaryString(indicators));
+        System.out.println("selectBit3              = " + toBinaryString(selectBit3));
+        indicators |= selectBit3;
+        System.out.println("indicators | selectBit3 = " + toBinaryString(indicators));
+        indicators  &= ~selectBit3;
+        System.out.println("The third bit of previous value of indicators has been switched off");
+        System.out.println("indicators &~ selectBit3 = " + toBinaryString(indicators));
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+indicators              = 1111111100000111
+selectBit3              = 100
+indicators & selectBit3 = 100
+
+indicators              = 1111111100001001
+selectBit3              = 100
+indicators | selectBit3 = 1111111100001101
+The third bit of previous value of indicators has been switched off
+indicators &~ selectBit3 = 1111111100001001
+*************************************************************************************************************************************************************
+Que19 : Write a program to show methods for operations on bits.
+*************************************************************************************************************************************************************
+//Methods of operations on bits
+import static java.lang.Long.*;
+
+public class Programm19
+{
+    public static void main(String[] args)
+    {
+        long number = 0xF00000000000000FL;
+        System.out.println("number:\n" + toBinaryString(number));
+
+        long result = rotateLeft(number, 2);
+        System.out.println("number rotated left 2 bits:\n" + toBinaryString(result));
+
+        result = rotateRight(number, 2);
+        System.out.println("number rotated right 2 bits:\n" + toBinaryString(result));
+
+        result = reverse(result);
+        System.out.println("previous result reversed:\n" + toBinaryString(result));
+
+        System.out.println("Bit count in number:\n" + bitCount(number));
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+number:
+1111000000000000000000000000000000000000000000000000000000001111
+number rotated left 2 bits:
+1100000000000000000000000000000000000000000000000000000000111111
+number rotated right 2 bits:
+1111110000000000000000000000000000000000000000000000000000000011
+previous result reversed:
+1100000000000000000000000000000000000000000000000000000000111111
+Bit count in number:
+8
+*************************************************************************************************************************************************************
+Que20(1) : Write a program to Decipher characters the  hard way.
+*************************************************************************************************************************************************************
+//Deciphering Characters hard way
+public class Programm20
+{
+    public static void main(String[] args)
+    {
+        char symbol = 'A';
+        symbol = (char)(128.0*Math.random());
+
+        if(symbol >= 'A')
+        {
+            if(symbol<='Z')
+            {
+                System.out.println("You have the capital letter " + symbol);
+            }
+        }
+        else
+        {
+            if(symbol >= 'a')
+            {
+                if(symbol <= 'z')
+                {
+                    System.out.println("You have the small letter " + symbol);
+                }
+                else{
+                    System.out.println("The code is greater than a but it's not a letter");
+                }
+            }
+            else{
+                System.out.println("The code is less than A so it's not a letter");
+            }
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm20
+You have the capital letter B
+
+E:\Assignments\JAVA\Part2>java Programm20
+
+E:\Assignments\JAVA\Part2>java Programm20
+The code is less than A so it's not a letter
+
+E:\Assignments\JAVA\Part2>java Programm20
+You have the capital letter U
+
+E:\Assignments\JAVA\Part2>java Programm20
+The code is less than A so it's not a letter
+*************************************************************************************************************************************************************
+Que20(2) : Write a program to Decipher  characters  the  easy  way.
+*************************************************************************************************************************************************************
+//Deciphering character in easy way
+public class Programm20ii
+{
+    public static void main(String[] args)
+    {
+        char symbol='A';
+        symbol  = (char)(128.0*Math.random());
+        if(symbol>='A' && symbol<='Z')
+        {
+            System.out.println("You have the capital letter "+ symbol);
+        }
+        else{
+            if(symbol>='a' && symbol<='z')
+            {
+                System.out.println("You have the small letter "+ symbol);
+            }
+            else{
+                System.out.println("The code is not a letter");
+            }
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm20ii
+The code is not a letter
+
+E:\Assignments\JAVA\Part2>java Programm20ii
+You have the small letter i
+
+E:\Assignments\JAVA\Part2>java Programm20ii
+You have the capital letter E
+
+E:\Assignments\JAVA\Part2>java Programm20ii
+The code is not a letter
+*************************************************************************************************************************************************************
+Que20(3) : Write a program to Decipher  characters  the  triviar  way.
+*************************************************************************************************************************************************************
+//Decipharing text trivially
+import static java.lang.Character.isLowerCase;
+import static java.lang.Character.isUpperCase;
+
+public class Programm20iii
+{
+    public static void main(String[] args)
+    {
+        char symbol = 'A';
+        symbol = (char)(128.0*Math.random());
+
+        if(isUpperCase(symbol))
+        {
+            System.out.println("You have the capital letter " + symbol);
+        }
+        else{
+            if(isLowerCase(symbol))
+            {
+                System.out.println("You have the small letter "+ symbol);
+            }
+            else{
+                System.out.println("The code is not a letter");
+            }
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm20iii
+The code is not a letter
+
+E:\Assignments\JAVA\Part2>java Programm20iii
+You have the small letter w
+
+E:\Assignments\JAVA\Part2>java Programm20iii
+You have the capital letter M
+
+E:\Assignments\JAVA\Part2>java Programm20iii
+You have the small letter w
+
+E:\Assignments\JAVA\Part2>java Programm20iii
+You have the small letter u
+
+E:\Assignments\JAVA\Part2>java Programm20iii
+The code is not a letter
+*************************************************************************************************************************************************************
+Que21 : Write a program demonstrate the use of conditional operator/Ternary operator.
+*************************************************************************************************************************************************************
+//turnary operator
+public class Programm21
+{
+    public static void main(String[] args)
+    {
+        boolean value = true;
+        System.out.println(value?true:false);
+    }
+}
+*************************************************************************************************************************************************************
+Output: 
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm21
+true
+*************************************************************************************************************************************************************
+Que22 : Write a program to demonstrate switch case with the washing machine modes.
+*************************************************************************************************************************************************************
+//Switch case
+public class Programm22
+{
+    enum Washchoice {cotton, wool, linen, synthetic}
+    public static void main(String[] args)
+    {
+        Washchoice wash = Washchoice.cotton;
+
+        int clothes = 3;
+
+        switch(clothes){
+            case 1:
+                System.out.println("Washing shirts.");
+                wash = Washchoice.cotton;
+                break;
+            case 2:
+                System.out.println("Washing sweaters.");
+                wash = Washchoice.wool;
+                break;
+            case 3:
+                System.out.println("Washing socks.");
+                wash = Washchoice.wool;
+                break;
+            case 4:
+                System.out.println("Washing sheets.");
+                wash = Washchoice.linen;
+                break;
+            case 5:
+                System.out.println("Washing pants.");
+                wash = Washchoice.synthetic;
+                break;
+            default:
+                System.out.println("Unknown washing - default synthetic");
+                wash = Washchoice.synthetic;
+                break;
+        }
+
+        System.out.println("wash is " + wash);
+
+        switch(wash){
+            case wool:
+                System.out.println("Temprature is 120.");
+                break;
+            case cotton:
+                System.out.println("Temprature is 170.");
+                break;
+            case synthetic:
+                System.out.println("Temprature is 130.");
+                break;
+            case linen:
+                System.out.println("Temprature is 180.");
+                break;
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+Washing socks.
+wash is wool
+Temprature is 120.
+*************************************************************************************************************************************************************
+Que23 : Write a program to demonstrate Numeric for loop.
+*************************************************************************************************************************************************************
+public class Programm23
+{
+    public static void main(String[] args)
+    {
+        int limit = 20;
+        int sum = 0;
+
+        for(int i=0;i<=limit;i++)
+        {
+            sum += i;
+        }
+        System.out.println("sum = "+sum);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm23
+sum = 210
+*************************************************************************************************************************************************************
+Que24 : Write a program to demonstrate Collection-based  for loop.
+*************************************************************************************************************************************************************
+//The Collection Based for loop
+public class Programm24
+{
+    enum Season {spring,summer,fall,winter}
+
+    public static void main(String[] args)
+    {
+        for(Season season : Season.values())
+        {
+            System.out.println("The season is now " + season);
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+The season is now spring
+The season is now summer
+The season is now fall
+The season is now winter
+*************************************************************************************************************************************************************
+Que25 : Write a program to demonstrate While loop.
+*************************************************************************************************************************************************************
+//The while loop
+public class Programm25
+{
+    public static void main(String[] args)
+    {
+        int limit = 20;
+        int sum = 0;
+        int i = 1;
+
+        while(i <= limit)
+        {
+            sum += i++;
+        }
+        System.out.println("sum = " + sum);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm25
+sum = 210
+*************************************************************************************************************************************************************
+Que26 : Write a program to demonstrate Do-While loop.
+*************************************************************************************************************************************************************
+//Demonstarte do while loop
+public class Programm26
+{
+    public static void main(String[] args)
+    {
+        int limit = 20;
+        int sum =0 ;
+        int i = 1;
+
+        do{
+            sum += i;
+            i++;
+        }while(i <= limit);
+        
+        System.out.println("sum = "+sum);
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm26
+sum = 210
+*************************************************************************************************************************************************************
+Que27 : Write a program to calculate factorial.
+*************************************************************************************************************************************************************
+//calculate factorial
+public class Programm27
+{
+    public static void main(String[] args)
+    {
+        long limit = 20L;
+        long factorial = 1L;
+
+        for(long i=1L;i <= limit; i++)
+        {
+            factorial = 1L;
+            for(long factor = 2; factor <= i; factor++)
+            {
+                factorial *= factor;
+            }
+            System.out.println(i + "! is " + factorial);
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm27
+1! is 1
+2! is 2
+3! is 6
+4! is 24
+5! is 120
+6! is 720
+7! is 5040
+8! is 40320
+9! is 362880
+10! is 3628800
+11! is 39916800
+12! is 479001600
+13! is 6227020800
+14! is 87178291200
+15! is 1307674368000
+16! is 20922789888000
+17! is 355687428096000
+18! is 6402373705728000
+19! is 121645100408832000
+20! is 2432902008176640000
+*************************************************************************************************************************************************************
+Que28 : Write a program to demonstrate use of labeled continue statement.
+*************************************************************************************************************************************************************
+//Labeled continue statement
+public class Programm28
+{
+    public static void main(String[] args)
+    {
+        long limit = 20L;
+        long factorial = 1L;
+
+        OuterLoop:
+        for(long i = 1L;i <= limit;i++)
+        {
+            factorial = 1;
+            for(long j = 2L; j <= i;j++)
+            {
+                if(i > 10L && i % 2L == 1L)
+                {
+                    continue OuterLoop;
+                }
+                factorial *= j;
+            }
+            System.out.println(i + "! is " + factorial);
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm28
+1! is 1
+2! is 2
+3! is 6
+4! is 24
+5! is 120
+6! is 720
+7! is 5040
+8! is 40320
+9! is 362880
+10! is 3628800
+12! is 479001600
+14! is 87178291200
+16! is 20922789888000
+18! is 6402373705728000
+20! is 2432902008176640000
+*************************************************************************************************************************************************************
+Que29(1) : : Write a program to calculate Prime using break statement.
+*************************************************************************************************************************************************************
+//Calculating Primes I
+public class Programm29{
+    public static void main(String[] args)
+    {
+        int nValues = 50;
+        boolean isPrime = true;
+        for(int i=2;i<nValues;i++)
+        {
+            isPrime = true;
+            for(int j =2;j<i;j++)
+            {
+                if (i%j == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if(isPrime)
+            {
+                System.out.println(i);
+            }
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm29
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+*************************************************************************************************************************************************************
+Que29(2) : Write a program to calculate Prime using labeled continue statement.
+*************************************************************************************************************************************************************
+public class Programm29ii
+{
+    public static void main(String[] args)
+    {
+        int nValues = 50;
+
+        OuterLoop:
+        for(int i=2; i<=nValues;i++)
+        {
+            for(int j=2;j < i;j++)
+            {
+                if(i%j == 0)
+                {
+                    continue OuterLoop;
+                }
+            }
+            System.out.println(i);
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm29ii
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+*************************************************************************************************************************************************************
+Que30(1) : Write a program to display a random choice from a set of six choices for breakfast (you coulduse any set; for example, scrambled eggs, waffles, fruit, cereal, toast, or yogurt).
+*************************************************************************************************************************************************************
+//Write a program to display a random choice from a set of six choices for breakfast (you could
+//use any set; for example, scrambled eggs, waffles, fruit, cereal, toast, or yogurt).
+public class Programm30i
+{
+    enum BreackFast {eggs,waffles,fruit,cereal,toast,yogurt}
+
+    public static void main(String[] args)
+    {
+        int num = 0;
+        double rand = 0;
+
+        BreackFast breakfast = BreackFast.eggs;
+
+        rand = 6*Math.random();
+        num = (int)Math.round(rand);
+
+        System.out.println("\nThe Breakfast menu is:");
+        System.out.println("1."+BreackFast.eggs);
+        System.out.println("2."+BreackFast.waffles);
+        System.out.println("3."+BreackFast.fruit);
+        System.out.println("4."+BreackFast.cereal);
+        System.out.println("5."+BreackFast.toast);
+        System.out.println("6."+BreackFast.yogurt);
+
+        switch (num) {
+            case 1:
+                breakfast = BreackFast.eggs;
+                break;
+            case 2:
+                breakfast = BreackFast.waffles;
+                break;
+            case 3:
+                breakfast = BreackFast.fruit;
+                break;
+            case 4:
+                breakfast = BreackFast.cereal;
+                break;
+            case 5:
+                breakfast = BreackFast.toast;
+                break;
+            case 6:
+                breakfast = BreackFast.yogurt;
+                break;
+        
+            default:
+                break;
+        }
+
+        System.out.println("Today's breakfast is " + breakfast);
+
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm30i
+
+The Breakfast menu is:
+1.eggs
+2.waffles
+3.fruit
+4.cereal
+5.toast
+6.yogurt
+Today's breakfast is waffles
+
+E:\Assignments\JAVA\Part2>java Programm30i
+
+The Breakfast menu is:
+1.eggs
+2.waffles
+3.fruit
+4.cereal
+5.toast
+6.yogurt
+Today's breakfast is cereal
+*************************************************************************************************************************************************************
+Que30(2) : When testing whether an integer is a prime, it is sufficient to try to divide by integers up to thesquare root of the number being tested. Rewrite the program example from this chapter to use this approach.
+*************************************************************************************************************************************************************
+/*
+When testing whether an integer is a prime, it is sufficient to try to divide by integers up to the
+square root of the number being tested. Rewrite the program example from this chapter to use
+this approach.
+*/
+public class Programm30ii
+{
+	public static void main(String[] args)
+	{
+		int nValue = 50;
+		boolean isPrime = true;
+		
+		for(int i=2;i<=nValue;i++)
+		{
+			isPrime = true;
+			for(int j=2;j<=(Math.sqrt(i));j++)
+			{
+				if(i%j==0)
+				{
+					isPrime=false;
+					break;
+				}
+			}
+			if(isPrime)
+				System.out.println(i);
+		}
+	}
+}
+*************************************************************************************************************************************************************
+Output: 
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm30ii
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+*************************************************************************************************************************************************************
+Que30(3) : A lottery requires that you select six different numbers from the integers 1 to 49. Write a      program to do this for you and generate five sets of entries.
+*************************************************************************************************************************************************************
+/*
+A lottery requires that you select six different numbers from the integers 1 to 49. Write a     
+ program to do this for you and generate five sets of entries.
+*/
+public class Programm30iii
+{
+	public static void main(String[] args)
+	{
+		for(int i=0; i<5 ; i++)
+		{
+			System.out.print("\nThe "+(i+1)+ " set is : ");
+			for(int j=0 ; j<6 ;)
+			{
+				System.out.print((int)( 1 + (Math.random() * (49-1) ) ) );
+				System.out.print("\t");
+				j++;
+			}
+		}
+	}
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm30iii
+
+The 1 set is : 28       45      22      6       43      6
+The 2 set is : 25       23      36      42      43      41
+The 3 set is : 47       12      1       6       20      18
+The 4 set is : 32       15      44      9       21      2
+The 5 set is : 44       35      36      26      28      14
+*************************************************************************************************************************************************************
+Que30(4) : Write a program to generate a random sequence of capital letters that does not include vowels.
+*************************************************************************************************************************************************************
+/*
+Write a program to generate a random sequence of capital letters that does not include vowels.
+*/
+public class Programm30iv
+{
+	public static void main(String[] args)
+	{
+		char ch;
+		double rand;
+		rand = 65 + ( Math.random()*(90-65));
+		ch=(char)Math.round(rand);
+		
+		if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+		{
+			System.out.println("The random Capital Number is : "+(char)(ch+3));
+		}
+		else
+		{
+			System.out.println("The Random Capital Number is : "+ch);
+		}
+		
+	}
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part2>java Programm30iv
+The Random Capital Number is : J
+
+E:\Assignments\JAVA\Part2>java Programm30iv
+The Random Capital Number is : Z
+
+E:\Assignments\JAVA\Part2>java Programm30iv
+The Random Capital Number is : C
+*************************************************************************************************************************************************************
+Part3:
+*************************************************************************************************************************************************************
+Que31 : Execute  “Help3.java” program.
+*************************************************************************************************************************************************************
+//Help3.java
+public class Programm31
+{
+    public static void main(String[] args)
+    throws java.io.IOException
+    {
+        char choice,ignore;
+        for(;;)
+        {
+            do{
+                System.out.println("Help on:");
+                System.out.println(" 1. if");
+				System.out.println(" 2. switch");
+				System.out.println(" 3. for");
+				System.out.println(" 4. while");
+				System.out.println(" 5. do-while");
+				System.out.println(" 6. break");
+				System.out.println(" 7. continue\n");
+                System.out.println("Choose one(q to quit):");
+                choice = (char)System.in.read();
+                do{
+                    ignore = (char)System.in.read();
+                }while(ignore!='\n');
+            }while(choice < '1' | choice > '7' & choice !='q');
+
+            if(choice == 'q') break;
+
+            switch(choice)
+            {
+                case '1':
+                    System.out.println("The if:\n");
+                    System.out.println("if(condition) statement;");
+                    System.out.println("else statement;");
+                    break;
+                case '2':
+                    System.out.println("The switch:\n");
+                    System.out.println("switch(expression) {");
+                    System.out.println("   case constant:");
+                    System.out.println("     statement sequence");
+                    System.out.println("     break;");
+                    System.out.println("   //...");
+                    System.out.println("}");
+                    break;
+                    
+                case '3':
+                    System.out.println("The for:\n");
+                    System.out.println("for(init; condition ; iteration)");
+                    System.out.println("  statement");
+                    break;
+                    
+                case '4':
+                    System.out.println("The while\n");
+                    System.out.println("while(condition) statement");
+                    break;
+                    
+                case '5':
+                    System.out.println("The do-while\n");
+                    System.out.println("do {");
+                    System.out.println("  statement;");
+                    System.out.println("} while(condition)");
+                    break;
+                    
+                case '6':
+                    System.out.println("The break\n");
+                    System.out.println("break; or break label;");
+                    break;
+                    
+                case '7':
+                    System.out.println("The continue\n");
+                    System.out.println("continue; or continue label;");
+                    break;    
+            }
+            System.out.println();
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm31
+Help on:
+ 1. if
+ 2. switch
+ 3. for
+ 4. while
+ 5. do-while
+ 6. break
+ 7. continue
+
+Choose one(q to quit):
+1
+The if:
+
+if(condition) statement;
+else statement;
+
+Help on:
+ 1. if
+ 2. switch
+ 3. for
+ 4. while
+ 5. do-while
+ 6. break
+ 7. continue
+
+Choose one(q to quit):
+2
+The switch:
+
+switch(expression) {
+   case constant:
+     statement sequence
+     break;
+   //...
+}
+
+Help on:
+ 1. if
+ 2. switch
+ 3. for
+ 4. while
+ 5. do-while
+ 6. break
+ 7. continue
+
+Choose one(q to quit):
+4
+The while
+
+while(condition) statement
+
+Help on:
+ 1. if
+ 2. switch
+ 3. for
+ 4. while
+ 5. do-while
+ 6. break
+ 7. continue
+
+Choose one(q to quit):
+q
+*************************************************************************************************************************************************************
+Que32 : Write a program to show how to handle Rounding Errors.
+*************************************************************************************************************************************************************
+//Show square roots of 1 to 99 and the rounding error
+public class Programm32
+{
+    public static void main(String[] args)
+    {
+        double num, sroot, rerr;
+        for(num = 1.0;num<100;num++)
+        {
+            sroot = Math.sqrt(num);
+
+            System.out.println("Square root of " + num + " is " + sroot);
+
+            rerr = num - (sroot * sroot);
+            System.out.println("Rounding error is "+rerr);
+            System.out.println();
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm32
+Square root of 1.0 is 1.0
+Rounding error is 0.0
+
+Square root of 2.0 is 1.4142135623730951
+Rounding error is -4.440892098500626E-16
+
+Square root of 3.0 is 1.7320508075688772
+Rounding error is 4.440892098500626E-16
+
+Square root of 4.0 is 2.0
+Rounding error is 0.0
+
+Square root of 5.0 is 2.23606797749979
+Rounding error is -8.881784197001252E-16
+
+Square root of 6.0 is 2.449489742783178
+Rounding error is 8.881784197001252E-16
+
+Square root of 7.0 is 2.6457513110645907
+Rounding error is -8.881784197001252E-16
+
+Square root of 8.0 is 2.8284271247461903
+Rounding error is -1.7763568394002505E-15
+
+Square root of 9.0 is 3.0
+Rounding error is 0.0
+
+Square root of 10.0 is 3.1622776601683795
+Rounding error is -1.7763568394002505E-15
+
+Square root of 11.0 is 3.3166247903554
+Rounding error is 0.0
+
+Square root of 12.0 is 3.4641016151377544
+Rounding error is 1.7763568394002505E-15
+
+Square root of 13.0 is 3.605551275463989
+Rounding error is 1.7763568394002505E-15
+
+Square root of 14.0 is 3.7416573867739413
+Rounding error is 0.0
+
+Square root of 15.0 is 3.872983346207417
+Rounding error is -1.7763568394002505E-15
+
+Square root of 16.0 is 4.0
+Rounding error is 0.0
+
+Square root of 17.0 is 4.123105625617661
+Rounding error is 0.0
+
+Square root of 18.0 is 4.242640687119285
+Rounding error is 3.552713678800501E-15
+
+Square root of 19.0 is 4.358898943540674
+Rounding error is -3.552713678800501E-15
+
+Square root of 20.0 is 4.47213595499958
+Rounding error is -3.552713678800501E-15
+
+Square root of 21.0 is 4.58257569495584
+Rounding error is 0.0
+
+Square root of 22.0 is 4.69041575982343
+Rounding error is 0.0
+
+Square root of 23.0 is 4.795831523312719
+Rounding error is 3.552713678800501E-15
+
+Square root of 24.0 is 4.898979485566356
+Rounding error is 3.552713678800501E-15
+
+Square root of 25.0 is 5.0
+Rounding error is 0.0
+
+Square root of 26.0 is 5.0990195135927845
+Rounding error is 3.552713678800501E-15
+
+Square root of 27.0 is 5.196152422706632
+Rounding error is 0.0
+
+Square root of 28.0 is 5.291502622129181
+Rounding error is -3.552713678800501E-15
+
+Square root of 29.0 is 5.385164807134504
+Rounding error is 3.552713678800501E-15
+
+Square root of 30.0 is 5.477225575051661
+Rounding error is 0.0
+
+Square root of 31.0 is 5.5677643628300215
+Rounding error is 3.552713678800501E-15
+
+Square root of 32.0 is 5.656854249492381
+Rounding error is -7.105427357601002E-15
+
+Square root of 33.0 is 5.744562646538029
+Rounding error is 0.0
+
+Square root of 34.0 is 5.830951894845301
+Rounding error is 0.0
+
+Square root of 35.0 is 5.916079783099616
+Rounding error is 0.0
+
+Square root of 36.0 is 6.0
+Rounding error is 0.0
+
+Square root of 37.0 is 6.082762530298219
+Rounding error is 7.105427357601002E-15
+
+Square root of 38.0 is 6.164414002968976
+Rounding error is 7.105427357601002E-15
+
+Square root of 39.0 is 6.244997998398398
+Rounding error is 0.0
+
+Square root of 40.0 is 6.324555320336759
+Rounding error is -7.105427357601002E-15
+
+Square root of 41.0 is 6.4031242374328485
+Rounding error is 0.0
+
+Square root of 42.0 is 6.48074069840786
+Rounding error is 0.0
+
+Square root of 43.0 is 6.557438524302
+Rounding error is 7.105427357601002E-15
+
+Square root of 44.0 is 6.6332495807108
+Rounding error is 0.0
+
+Square root of 45.0 is 6.708203932499369
+Rounding error is -7.105427357601002E-15
+
+Square root of 46.0 is 6.782329983125268
+Rounding error is 0.0
+
+Square root of 47.0 is 6.855654600401044
+Rounding error is 0.0
+
+Square root of 48.0 is 6.928203230275509
+Rounding error is 7.105427357601002E-15
+
+Square root of 49.0 is 7.0
+Rounding error is 0.0
+
+Square root of 50.0 is 7.0710678118654755
+Rounding error is -7.105427357601002E-15
+
+Square root of 51.0 is 7.14142842854285
+Rounding error is -7.105427357601002E-15
+
+Square root of 52.0 is 7.211102550927978
+Rounding error is 7.105427357601002E-15
+
+Square root of 53.0 is 7.280109889280518
+Rounding error is 0.0
+
+Square root of 54.0 is 7.3484692283495345
+Rounding error is 0.0
+
+Square root of 55.0 is 7.416198487095663
+Rounding error is 0.0
+
+Square root of 56.0 is 7.483314773547883
+Rounding error is 0.0
+
+Square root of 57.0 is 7.54983443527075
+Rounding error is 0.0
+
+Square root of 58.0 is 7.615773105863909
+Rounding error is -7.105427357601002E-15
+
+Square root of 59.0 is 7.681145747868608
+Rounding error is 7.105427357601002E-15
+
+Square root of 60.0 is 7.745966692414834
+Rounding error is -7.105427357601002E-15
+
+Square root of 61.0 is 7.810249675906654
+Rounding error is 7.105427357601002E-15
+
+Square root of 62.0 is 7.874007874011811
+Rounding error is 0.0
+
+Square root of 63.0 is 7.937253933193772
+Rounding error is -7.105427357601002E-15
+
+Square root of 64.0 is 8.0
+Rounding error is 0.0
+
+Square root of 65.0 is 8.06225774829855
+Rounding error is 1.4210854715202004E-14
+
+Square root of 66.0 is 8.12403840463596
+Rounding error is -1.4210854715202004E-14
+
+Square root of 67.0 is 8.18535277187245
+Rounding error is 0.0
+
+Square root of 68.0 is 8.246211251235321
+Rounding error is 0.0
+
+Square root of 69.0 is 8.306623862918075
+Rounding error is 0.0
+
+Square root of 70.0 is 8.366600265340756
+Rounding error is 0.0
+
+Square root of 71.0 is 8.426149773176359
+Rounding error is 0.0
+
+Square root of 72.0 is 8.48528137423857
+Rounding error is 1.4210854715202004E-14
+
+Square root of 73.0 is 8.54400374531753
+Rounding error is 1.4210854715202004E-14
+
+Square root of 74.0 is 8.602325267042627
+Rounding error is 0.0
+
+Square root of 75.0 is 8.660254037844387
+Rounding error is -1.4210854715202004E-14
+
+Square root of 76.0 is 8.717797887081348
+Rounding error is -1.4210854715202004E-14
+
+Square root of 77.0 is 8.774964387392123
+Rounding error is -1.4210854715202004E-14
+
+Square root of 78.0 is 8.831760866327848
+Rounding error is -1.4210854715202004E-14
+
+Square root of 79.0 is 8.888194417315589
+Rounding error is 0.0
+
+Square root of 80.0 is 8.94427190999916
+Rounding error is -1.4210854715202004E-14
+
+Square root of 81.0 is 9.0
+Rounding error is 0.0
+
+Square root of 82.0 is 9.055385138137417
+Rounding error is -1.4210854715202004E-14
+
+Square root of 83.0 is 9.1104335791443
+Rounding error is 0.0
+
+Square root of 84.0 is 9.16515138991168
+Rounding error is 0.0
+
+Square root of 85.0 is 9.219544457292887
+Rounding error is 0.0
+
+Square root of 86.0 is 9.273618495495704
+Rounding error is 0.0
+
+Square root of 87.0 is 9.327379053088816
+Rounding error is -1.4210854715202004E-14
+
+Square root of 88.0 is 9.38083151964686
+Rounding error is 0.0
+
+Square root of 89.0 is 9.433981132056603
+Rounding error is 1.4210854715202004E-14
+
+Square root of 90.0 is 9.486832980505138
+Rounding error is 0.0
+
+Square root of 91.0 is 9.539392014169456
+Rounding error is 0.0
+
+Square root of 92.0 is 9.591663046625438
+Rounding error is 1.4210854715202004E-14
+
+Square root of 93.0 is 9.643650760992955
+Rounding error is 0.0
+
+Square root of 94.0 is 9.695359714832659
+Rounding error is -1.4210854715202004E-14
+
+Square root of 95.0 is 9.746794344808963
+Rounding error is 1.4210854715202004E-14
+
+Square root of 96.0 is 9.797958971132712
+Rounding error is 1.4210854715202004E-14
+
+Square root of 97.0 is 9.848857801796104
+Rounding error is 1.4210854715202004E-14
+
+Square root of 98.0 is 9.899494936611665
+Rounding error is 0.0
+
+Square root of 99.0 is 9.9498743710662
+Rounding error is 0.0
+*************************************************************************************************************************************************************
+Que33 : Write a program which accepts characters until ‘S’ is typed.
+*************************************************************************************************************************************************************
+//Loop until S is typed
+public class Programm33
+{
+    public static void main(String[] args)
+    throws java.io.IOException
+    {
+        int i;
+        System.out.println("Press S to stop");
+
+        for(i = 0; (char)System.in.read() != 'S'; i++)
+        {
+            System.out.println("Pass #" + i);
+        }
+    }
+}
+*************************************************************************************************************************************************************
+OutPut:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm33
+Press S to stop
+a
+Pass #0
+Pass #1
+Pass #2
+3
+Pass #3
+Pass #4
+Pass #5
+s
+Pass #6
+Pass #7
+Pass #8
+S
+*************************************************************************************************************************************************************
+Que34 : Write a program to demonstrate while loop.
+*************************************************************************************************************************************************************
+//Do while demo oracle press
+public class Programm34
+{
+    public static void main(String[] args)
+    {
+        char ch;
+        ch = 'a';
+
+        while(ch <= 'z')
+        {
+            System.out.println(ch);
+            ch++;
+        }
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm34
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+*************************************************************************************************************************************************************
+Que35 : Write a program to demonstrate Do-while loop.
+*************************************************************************************************************************************************************
+//demonstrate do while loop oracle press
+public class Programm35
+{
+    public static void main(String[] args)
+    throws java.io.IOException
+    {
+        char ch;
+
+        do{
+            System.out.println("Press a key followed by Enter: ");
+            ch = (char)System.in.read();
+        }while(ch != 'q');
+
+    }
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm35
+Press a key followed by Enter:
+a
+Press a key followed by Enter:
+Press a key followed by Enter:
+Press a key followed by Enter:
+w
+Press a key followed by Enter:
+Press a key followed by Enter:
+Press a key followed by Enter:
+e
+Press a key followed by Enter:
+Press a key followed by Enter:
+Press a key followed by Enter:
+q
+*************************************************************************************************************************************************************
+Que36 : Write a program to create game to guess the word.
+*************************************************************************************************************************************************************
+//Guess the letter game
+public class Programm36
+{
+    public static void main(String[] args)
+	throws java.io.IOException
+	{
+		char ch,ignor,answer = 'K';
+		
+		do
+		{
+			System.out.println("I'm thinking of a letter between A and Z.");
+			System.out.print("Can you Guess it  : ");
+			
+			ch = (char) System.in.read();
+			
+			//discards any other charcter in the input
+			do{
+				ignor = (char) System.in.read();
+			}while(ignor!='\n');
+			
+			if(ch==answer) System.out.println("** Right **");
+			else
+			{
+				System.out.print("...Sorry, you're");
+				if(ch < answer) System.out.println(" too low");
+				else System.out.println(" too high");
+				System.out.println("Try again!\n");
+			}
+		}while(answer!=ch);
+	}
+}
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+
+*************************************************************************************************************************************************************
+Que37 : The ASCII lowercase letters are separated from the uppercase letters by 32. Thus, to convert a lowercase letter to uppercase, subtract 32 from it. Use this information to write a program that reads characters from the keyboard. Have it convert all lowercase letters to uppercase, and all uppercase letters to lowercase, displaying the result. Make no changes to any other character. Have the program stop when the user enters a period. At the end, have the program display the number of case changes that have taken place.
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm36
+I'm thinking of a letter between A and Z.
+Can you Guess it  : a
+...Sorry, you're too high
+Try again!
+
+I'm thinking of a letter between A and Z.
+Can you Guess it  : w
+...Sorry, you're too high
+Try again!
+
+I'm thinking of a letter between A and Z.
+Can you Guess it  : i
+...Sorry, you're too high
+Try again!
+
+I'm thinking of a letter between A and Z.
+Can you Guess it  : j
+...Sorry, you're too high
+Try again!
+
+I'm thinking of a letter between A and Z.
+Can you Guess it  : f
+...Sorry, you're too high
+Try again!
+
+I'm thinking of a letter between A and Z.
+Can you Guess it  : .
+...Sorry, you're too low
+Try again!
+*************************************************************************************************************************************************************
+Output:
+*************************************************************************************************************************************************************
+E:\Assignments\JAVA\Part3>java Programm37
+Enter Character (press . to quit):
+a
+Now, The charcter is : A
+Enter Character (press . to quit):
+S
+Now, The charcter is : s
+Enter Character (press . to quit):
+b
+Now, The charcter is : B
+Enter Character (press . to quit):
+D
+Now, The charcter is : d
+Enter Character (press . to quit):
+w
+Now, The charcter is : W
+Enter Character (press . to quit):
+.
+The uppercase conversions are : 3
+The lowercase conversions are : 2
+*************************************************************************************************************************************************************
